@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: #ffffff;
+}
+
+.dashboard {
+  width: 400px;
+  margin: 50px auto;
+}
+
+input{
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+    border-radius: 15px;
+    align-items: center;
+    text-align: center;
+}
+button{
+     width: 50%;
+  padding: 10px;
+  margin: 10px 105px;
+    border-radius: 15px;
+    align-items: center;
+    cursor: pointer;
+}
+
+button:hover{
+  background-color: cadetblue;
+  transition: 0.7s;
+}
+li {
+  background: #1e1e1e;
+  padding: 10px;
+  margin: 5px 0;
+  list-style: none;
+}
+
