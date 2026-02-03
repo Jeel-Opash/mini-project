@@ -1,5 +1,5 @@
 import { useEffect, useState, useTransition } from "react";
-import { useParams } from "react-router-dom"
+import { NavLink, useParams } from "react-router-dom"
 import { getCountryIndData } from "../../api/postApi";
 
 export const CountryDetails=()=>{
@@ -24,10 +24,11 @@ export const CountryDetails=()=>{
        return (
         <section className="card country-details-card container">
             <div className="container-card bg-white-box">
+                {country &&(
                <div className="country-image grid grid-two-cols">
                 <img src={country.flags.svg} alt="country.flags.alt" 
                 className="flag"/>
-                {/* <div className="country-content">
+                <div className="country-content">
                     <p className="card-title">{country.name.official}</p>
                     <div className="infoContainer">
                         <p>
@@ -38,8 +39,38 @@ export const CountryDetails=()=>{
                         <p>
                         <span className="card-description">Population:</span>
                         {country.population.toLocaleString()}</p>
+                        <p>
+                            <span className="card-description">Region:</span>
+                        </p>
+                        <p>
+                            <span className="card-description">Sub Region:</span>
+                        </p>
+                        <p>
+                            <span className="card-description">Capital:</span>
+                            {country.capital}
+                        </p>
+                        <p>
+                            <span className="card-description">Top Level Domain:</span>
+                            {country.tld[0]}
+                        </p>
+                        <p>
+                            <span className="card-decription">Currencies:</span>
+                            {Object.keys(country.currencies)
+                            .map((curele)=>country.currencies[curele].name).join(",")}
+                        </p>
+                        <p>
+                            <span className="card-decription">Languages:</span>
+                            {Object.keys(country.languages)
+                            .map((key)=>country.languages[key]).join(",")}
+                        </p>
                     </div>
-                </div> */}
+                </div>
+               </div>
+               )}
+               <div className="country-card-backBtn">
+                <NavLink to="/country" className="backBtn">
+                <button>Back</button>
+                </NavLink>
                </div>
             </div>
         </section>

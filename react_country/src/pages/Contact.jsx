@@ -15,7 +15,7 @@ export const Contact=()=>{
                 <input type="email" className="form-control" required autoComplete="false"
                 placeholder="Enter your email"
                 name="email"/>
-                <textarea type="message" className="form-control" required autoComplete="false"
+                <textarea type="message" className="form-control" required autoComplete="off"
                 placeholder="Enter your message"
                 name="message"/>
                 <button type="submit" value="send">Send</button>
