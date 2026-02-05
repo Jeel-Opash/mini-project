@@ -1,0 +1,305 @@
+[
+  {
+    "userId": 1001,
+    "username": "admin_jeel",
+    "email": "admin.jeel@example.com",
+    "role": "Admin",
+    "totalRevenue": "$52,184",
+    "activeUsers": 128,
+    "newSignups": 34,
+    "conversionRate": "4.1%"
+  },
+  {
+    "userId": 1002,
+    "username": "admin_rohit",
+    "email": "rohit.admin@example.com",
+    "role": "Admin",
+    "totalRevenue": "$47,902",
+    "activeUsers": 119,
+    "newSignups": 29,
+    "conversionRate": "3.6%"
+  },
+  {
+    "userId": 1003,
+    "username": "manager_riya",
+    "email": "riya.manager@example.com",
+    "role": "Manager",
+    "totalRevenue": "$38,445",
+    "activeUsers": 96,
+    "newSignups": 24,
+    "conversionRate": "3.9%"
+  },
+  {
+    "userId": 1004,
+    "username": "manager_amit",
+    "email": "amit.manager@example.com",
+    "role": "Manager",
+    "totalRevenue": "$31,770",
+    "activeUsers": 82,
+    "newSignups": 18,
+    "conversionRate": "3.1%"
+  },
+  {
+    "userId": 1005,
+    "username": "editor_kavya",
+    "email": "kavya.editor@example.com",
+    "role": "Editor",
+    "totalRevenue": "$28,574",
+    "activeUsers": 74,
+    "newSignups": 21,
+    "conversionRate": "3.4%"
+  },
+  {
+    "userId": 1006,
+    "username": "editor_ankit",
+    "email": "ankit.editor@example.com",
+    "role": "Editor",
+    "totalRevenue": "$25,910",
+    "activeUsers": 69,
+    "newSignups": 19,
+    "conversionRate": "3.0%"
+  },
+  {
+    "userId": 1007,
+    "username": "user_neha",
+    "email": "neha.user@example.com",
+    "role": "User",
+    "totalRevenue": "$18,442",
+    "activeUsers": 51,
+    "newSignups": 14,
+    "conversionRate": "2.8%"
+  },
+  {
+    "userId": 1008,
+    "username": "user_rahul",
+    "email": "rahul.user@example.com",
+    "role": "User",
+    "totalRevenue": "$20,118",
+    "activeUsers": 56,
+    "newSignups": 16,
+    "conversionRate": "3.2%"
+  },
+  {
+    "userId": 1009,
+    "username": "user_sneha",
+    "email": "sneha.user@example.com",
+    "role": "User",
+    "totalRevenue": "$14,765",
+    "activeUsers": 43,
+    "newSignups": 11,
+    "conversionRate": "2.5%"
+  },
+  {
+    "userId": 1010,
+    "username": "user_karan",
+    "email": "karan.user@example.com",
+    "role": "User",
+    "totalRevenue": "$16,304",
+    "activeUsers": 47,
+    "newSignups": 13,
+    "conversionRate": "2.9%"
+  },
+
+  {
+    "userId": 1011,
+    "username": "manager_priya",
+    "email": "priya.manager@example.com",
+    "role": "Manager",
+    "totalRevenue": "$41,233",
+    "activeUsers": 101,
+    "newSignups": 27,
+    "conversionRate": "4.0%"
+  },
+  {
+    "userId": 1012,
+    "username": "editor_manish",
+    "email": "manish.editor@example.com",
+    "role": "Editor",
+    "totalRevenue": "$29,118",
+    "activeUsers": 77,
+    "newSignups": 22,
+    "conversionRate": "3.5%"
+  },
+  {
+    "userId": 1013,
+    "username": "user_pooja",
+    "email": "pooja.user@example.com",
+    "role": "User",
+    "totalRevenue": "$17,590",
+    "activeUsers": 49,
+    "newSignups": 15,
+    "conversionRate": "3.1%"
+  },
+  {
+    "userId": 1014,
+    "username": "user_akash",
+    "email": "akash.user@example.com",
+    "role": "User",
+    "totalRevenue": "$13,842",
+    "activeUsers": 39,
+    "newSignups": 10,
+    "conversionRate": "2.4%"
+  },
+  {
+    "userId": 1015,
+    "username": "admin_sonal",
+    "email": "sonal.admin@example.com",
+    "role": "Admin",
+    "totalRevenue": "$55,670",
+    "activeUsers": 136,
+    "newSignups": 38,
+    "conversionRate": "4.3%"
+  },
+
+  {
+    "userId": 1016,
+    "username": "manager_nikhil",
+    "email": "nikhil.manager@example.com",
+    "role": "Manager",
+    "totalRevenue": "$34,906",
+    "activeUsers": 88,
+    "newSignups": 23,
+    "conversionRate": "3.3%"
+  },
+  {
+    "userId": 1017,
+    "username": "editor_sara",
+    "email": "sara.editor@example.com",
+    "role": "Editor",
+    "totalRevenue": "$26,431",
+    "activeUsers": 71,
+    "newSignups": 20,
+    "conversionRate": "3.6%"
+  },
+  {
+    "userId": 1018,
+    "username": "user_vikas",
+    "email": "vikas.user@example.com",
+    "role": "User",
+    "totalRevenue": "$19,205",
+    "activeUsers": 54,
+    "newSignups": 17,
+    "conversionRate": "3.0%"
+  },
+  {
+    "userId": 1019,
+    "username": "user_ananya",
+    "email": "ananya.user@example.com",
+    "role": "User",
+    "totalRevenue": "$15,978",
+    "activeUsers": 46,
+    "newSignups": 12,
+    "conversionRate": "2.7%"
+  },
+  {
+    "userId": 1020,
+    "username": "user_mohit",
+    "email": "mohit.user@example.com",
+    "role": "User",
+    "totalRevenue": "$21,344",
+    "activeUsers": 59,
+    "newSignups": 18,
+    "conversionRate": "3.4%"
+  },
+
+  {
+    "userId": 1021,
+    "username": "user_rakesh",
+    "email": "rakesh.user@example.com",
+    "role": "User",
+    "totalRevenue": "$16,889",
+    "activeUsers": 48,
+    "newSignups": 14,
+    "conversionRate": "2.9%"
+  },
+  {
+    "userId": 1022,
+    "username": "user_meena",
+    "email": "meena.user@example.com",
+    "role": "User",
+    "totalRevenue": "$18,430",
+    "activeUsers": 52,
+    "newSignups": 16,
+    "conversionRate": "3.2%"
+  },
+  {
+    "userId": 1023,
+    "username": "editor_rohan",
+    "email": "rohan.editor@example.com",
+    "role": "Editor",
+    "totalRevenue": "$27,902",
+    "activeUsers": 73,
+    "newSignups": 21,
+    "conversionRate": "3.7%"
+  },
+  {
+    "userId": 1024,
+    "username": "manager_alok",
+    "email": "alok.manager@example.com",
+    "role": "Manager",
+    "totalRevenue": "$36,118",
+    "activeUsers": 92,
+    "newSignups": 25,
+    "conversionRate": "3.8%"
+  },
+  {
+    "userId": 1025,
+    "username": "user_kirti",
+    "email": "kirti.user@example.com",
+    "role": "User",
+    "totalRevenue": "$14,233",
+    "activeUsers": 41,
+    "newSignups": 11,
+    "conversionRate": "2.6%"
+  },
+  {
+    "userId": 1026,
+    "username": "user_sahil",
+    "email": "sahil.user@example.com",
+    "role": "User",
+    "totalRevenue": "$20,667",
+    "activeUsers": 58,
+    "newSignups": 17,
+    "conversionRate": "3.3%"
+  },
+  {
+    "userId": 1027,
+    "username": "editor_nina",
+    "email": "nina.editor@example.com",
+    "role": "Editor",
+    "totalRevenue": "$24,980",
+    "activeUsers": 68,
+    "newSignups": 19,
+    "conversionRate": "3.1%"
+  },
+  {
+    "userId": 1028,
+    "username": "manager_suresh",
+    "email": "suresh.manager@example.com",
+    "role": "Manager",
+    "totalRevenue": "$39,540",
+    "activeUsers": 104,
+    "newSignups": 28,
+    "conversionRate": "4.0%"
+  },
+  {
+    "userId": 1029,
+    "username": "user_isha",
+    "email": "isha.user@example.com",
+    "role": "User",
+    "totalRevenue": "$17,110",
+    "activeUsers": 50,
+    "newSignups": 15,
+    "conversionRate": "3.0%"
+  },
+  {
+    "userId": 1030,
+    "username": "user_arjun",
+    "email": "arjun.user@example.com",
+    "role": "User",
+    "totalRevenue": "$22,784",
+    "activeUsers": 62,
+    "newSignups": 19,
+    "conversionRate": "3.6%"
+  }
+]

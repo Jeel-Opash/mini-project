@@ -1,4 +1,3 @@
-declare module "./AccountForm" {
-  import * as React from "react";
-  export function AccountForm(): React.JSX.Element;
-}
+import * as React from "react";
+
+export function AccountForm(props: any): React.JSX.Element;

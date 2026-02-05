@@ -1,0 +1,15 @@
+.header{
+background: #c5c3c3;
+overflow: hidden;
+}
+.main ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+li .tap{
+    display: block;
+    color: aliceblue;
+}

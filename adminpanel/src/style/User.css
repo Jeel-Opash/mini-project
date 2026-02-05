@@ -1,0 +1,20 @@
+.userdetail{
+    background-color: aliceblue;
+    border-radius: 2px;
+    border-color: aliceblue;
+    width: 100%;
+    justify-content: center;
+  flex-direction: column;
+    align-items: center;
+
+}
+.header{
+    color: black;
+}
+thead{
+    color: black;
+}
+tbody{
+    color: black;
+}
+
