@@ -14,3 +14,27 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+# React Admin Panel
+A frontend admin dashboard built using React.
+It allows managing users, roles, and application settings.
+
+## Features Section
+Admin management (view, search, delete)
+Role-based access
+Settings panel
+
+## Tech Stack
+React Typescript
+Css
+React-Router-Dom
+
+## Installation
+ npm install
+  npm install
+
+## usage
+-Login by Admin only
+-after login open a dashboard
+-show a taskbar in a three pages name :-About,User,Setting

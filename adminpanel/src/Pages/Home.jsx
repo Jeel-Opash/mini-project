@@ -18,9 +18,9 @@ export const Home=()=>{
 
     {isopen &&  (<nav className="menu">
                 <ul>
-                    <li><NavLink className="path" to="/">About</NavLink></li>
-                     <li><NavLink className="path"  to="/user">User</NavLink></li>
-                     <li><NavLink className="path" to="/setting">Setting</NavLink></li>
+                 <li><NavLink className="path" to="/">About</NavLink></li>
+                 <li><NavLink className="path"  to="/user">User</NavLink></li>
+                <li><NavLink className="path" to="/setting">Setting</NavLink></li>
                      
                 </ul>
             </nav>

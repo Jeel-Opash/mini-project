@@ -1,108 +1,68 @@
-
-.About-page{
-    background-color: rgb(75, 128, 174);
-    padding: 20px;
-    margin-left: 2cm;
+.About-page {
+  background-color: #f9f9fa;
+  padding: 20px;
+  margin-left: 2cm;
 }
 
-.navbar{
-    background-color: black;
-    color: aliceblue;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+.navbar {
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 8px;
 }
-.user{
-    display: flex;
-    justify-content: space-between;
-    align-items:center ;
+body.dark .navbar {
+  background-color: #1e1e1e;
+  color: #fff;
 }
-.logo{
-    font-size: 1.5rem;
-}
-.name{
-    font-size: 1rem;
+body:not(.dark) .navbar {
+  background-color: #000;
+  color: white;
 }
 
-.search-box,
-.search{
-    display: flex;
-    gap: 8px;
-    margin: 16px 0;
-}
-.search-box input,
-.search input{
-    padding: 8px 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    min-width: 220px;
-}
-.search-box button,
-.search button{
-    padding: 8px 12px;
-    border-radius: 6px;
-    border: none;
-    background: #6eab70;
-    color: #0e0d0d;
-    cursor: pointer;
+.search {
+  margin: 20px 0;
+  padding: 10px;
+  width: 300px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
-.userdetail,
-.user-card{
-    background: #fff;
-    border-radius: 8px;
-    padding: 12px;
-    margin: 12px 0;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-.card-content{
-    display: flex;
-    gap: 12px;
-    margin-top: 12px;
-    flex-wrap: wrap;
-}
-.revenue-box{
-    padding: 10px;
-    border-radius: 10px;
-    min-width: 160px;
-}
-p.userid{
-    border:solid #0e0d0d;
-    padding: 10px;
-     border-radius: 10px;
-    background-color:linear-gradient(to right, #a1c4fd, #0d3b66); 
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
 }
 
-p.username{
-    border:solid #0e0d0d;
-    padding: 10px;
-     border-radius: 10px;
-    background-color:linear-gradient(to right, #a1c4fd, #0d3b66); 
-}
-p.email{
-    border:solid #0e0d0d;
-    padding: 10px;
-     border-radius: 10px;
-    background-color:linear-gradient(to right, #a1c4fd, #0d3b66); 
-}
-p.totalrevenue{
-    border:solid #0e0d0d;
-    padding: 10px;
-     border-radius: 10px;
-    background-color:linear-gradient(to right, #a1c4fd, #0d3b66); 
-}
-p.activeusers{
-    border:solid #0e0d0d;
-    padding: 10px;
-     border-radius: 10px;
-    background-color:linear-gradient(to right, #a1c4fd, #0d3b66); 
+.stat-card {
+  color: white;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
 }
 
-p.conversionrate{
-     background-color:linear-gradient(to right, #a1c4fd, #0d3b66); 
-    border:solid #0e0d0d;
-    padding: 10px;
-     border-radius: 10px;
-    background-color:linear-gradient(to right, #a1c4fd, #0d3b66); 
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card h4 {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.stat-card p {
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.green {
+  background: linear-gradient(135deg, #667eea, #c0c9f1);
+}
+.red{
+  background: linear-gradient(135deg, #d01302, #e4a9a9);
 }
