@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f1f5f9, #e0f2fe);
+}
+
+.mainnavbar {
+  width: 100%;
+  height: 80px;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.navbarsize {
+  display: flex;
+  align-items: center;
+}
+
+.Imginside img {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2563eb;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.Imginside img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(37, 99, 235, 0.35);
+}
+
+.hexagone {
+  flex: 1;
+  text-align: center;
+}
+
+.hexagonesiz {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, #2563eb, #06b6d4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.awardadd {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.resultnavlink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  transition: 0.3s ease;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.25);
+}
+
+.resultnavlink:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(6, 182, 212, 0.35);
+}
+
+.logoutbtn,
+.resultloginnavlink {
+  padding: 9px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.logoutbtn {
+  background: #ef4444;
+  color: white;
+}
+
+.logoutbtn:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+}
+
+.resultloginnavlink {
+  background: #22c55e;
+  color: white;
+}
+
+.resultloginnavlink:hover {
+  background: #16a34a;
+  transform: translateY(-2px);
+}
+
+.menuicon {
+  position: relative;
+}
+
+.menuiconsize {
+  background: #f1f5f9;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 22px;
+  display: none;
+  transition: 0.3s ease;
+}
+
+.menuiconsize:hover {
+  background: #e2e8f0;
+}
+
+.mobileMenuPanel {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  width: 200px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  padding: 12px 0;
+  animation: fadeSlide 0.3s ease;
+}
+
+.mobileMenuList {
+  list-style: none;
+}
+
+.mobileMenuItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #334155;
+  font-weight: 500;
+  transition: 0.3s ease;
+  background: none;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.mobileMenuItem:hover {
+  background: #f1f5f9;
+  color: #2563eb;
+}
+
+.logoutmobile {
+  color: #ef4444;
+}
+
+.logoutmobile:hover {
+  background: #fee2e2;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .mainnavbar {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .resultnavlink,
+  .logoutbtn,
+  .resultloginnavlink {
+    display: none;
+  }
+
+  .menuiconsize {
+    display: block;
+  }
+
+  .hexagonesiz {
+    font-size: 20px;
+  }
+
+  .Imginside img {
+    width: 48px;
+    height: 48px;
+  }
+}
