@@ -1,9 +1,10 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+dotenv.config();
 import { connectDB } from './config/db.js';
 import userRouter from './routes/user.router.js';
-import resultRouter from './routes/result.routes.js';
+import resultRouter from './routes/result.route.js';
 
 
 const app = express();
@@ -16,8 +17,8 @@ app.use(express.urlencoded({ extended: true }));
 connectDB();
 
 
-app.use('/api/auth',userRouter);
-app.use('/api/results',resultRouter);
+app.use('/api/auth', userRouter);
+app.use('/api/results', resultRouter);
 
 
 
