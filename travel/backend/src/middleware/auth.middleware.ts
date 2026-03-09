@@ -6,9 +6,8 @@ interface TokenPayload extends JwtPayload {
   id: string;
 }
 
-const JWT_SECRET_KEY = process.env.JWT_SECRET as string;
-
 export const auth = async (req: Request, res: Response, next: NextFunction) => {
+  const JWT_SECRET_KEY = process.env.JWT_SECRET as string;
   const authHeader = req.header("authorization");
 
   if (!authHeader || !authHeader.startsWith("Bearer ")) {

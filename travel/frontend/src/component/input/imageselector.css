@@ -1,0 +1,129 @@
+.image-selector{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:"Inter",sans-serif;
+}
+
+.upload-btn{
+    width:100%;
+    max-width:360px;
+    height:180px;
+    border:2px dashed #c7d2fe;
+    border-radius:18px;
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+    transition:all .35s ease;
+    color:#6366f1;
+    font-weight:500;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.upload-btn div{
+    width:55px;
+    height:55px;
+    border-radius:14px;
+    background:linear-gradient(135deg,#6366f1,#7c3aed);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    box-shadow:0 8px 18px rgba(99,102,241,0.35);
+    transition:all .3s ease;
+}
+
+.upload-btn p{
+    font-size:14px;
+    color:#6b7280;
+}
+
+.upload-btn:hover{
+    border-color:#6366f1;
+    transform:translateY(-3px);
+    box-shadow:0 18px 35px rgba(99,102,241,0.2);
+}
+
+.upload-btn:hover div{
+    transform:scale(1.1) rotate(6deg);
+}
+
+.preview-container{
+    position:relative;
+    width:100%;
+    max-width:380px;
+    border-radius:18px;
+    overflow:hidden;
+    background:white;
+    box-shadow:0 20px 45px rgba(0,0,0,0.15);
+    animation:previewShow .35s ease;
+}
+
+.preview-image{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+    transition:all .4s ease;
+}
+
+.preview-container:hover .preview-image{
+    transform:scale(1.05);
+}
+
+.remove-image-btn{
+    position:absolute;
+    bottom:12px;
+    right:12px;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    border:none;
+    padding:7px 12px;
+    border-radius:10px;
+    background:rgba(255,255,255,0.9);
+    color:#ef4444;
+    font-size:13px;
+    font-weight:500;
+    cursor:pointer;
+    backdrop-filter:blur(8px);
+    box-shadow:0 6px 15px rgba(0,0,0,0.15);
+    transition:all .3s ease;
+}
+
+.remove-image-btn:hover{
+    background:#ef4444;
+    color:white;
+    transform:translateY(-2px);
+    box-shadow:0 10px 20px rgba(239,68,68,0.4);
+}
+
+@keyframes previewShow{
+    from{
+        opacity:0;
+        transform:scale(.92);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+@media (max-width:600px){
+
+.upload-btn{
+    height:150px;
+}
+
+.preview-image{
+    height:180px;
+}
+
+}

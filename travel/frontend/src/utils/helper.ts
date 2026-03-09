@@ -1,0 +1,14 @@
+export const validateEmail = (email: string): boolean => {
+  const regex: RegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+};
+
+export const getInitials = (name: string): string => {
+  if (!name) return "";
+  const words = name.trim().split(" ");
+  let initials = "";
+  for (let i = 0; i < Math.min(words.length, 2); i++) {
+    initials += words[i].charAt(0);
+  }
+  return initials.toUpperCase();
+};

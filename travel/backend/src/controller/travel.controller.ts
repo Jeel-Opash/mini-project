@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import Travel from "../models/travel.model.js";
-import { error } from "node:console";
 
 export const addTravel = async (req: Request, res: Response) => {
   try {
@@ -74,13 +73,18 @@ export const editTravel = async (req: Request, res: Response): Promise<Response>
   }
 
   let parsedVisitedDate: Date;
-  if (visitedDate instanceof Date) {
+  if (!visitedDate) {
+    parsedVisitedDate = new Date();
+  } else if (visitedDate instanceof Date) {
     parsedVisitedDate = visitedDate;
-  } else if (typeof visitedDate === 'string' || typeof visitedDate === 'number') {
+  } else {
     const timestamp = Number(visitedDate);
     parsedVisitedDate = isNaN(timestamp) ? new Date(visitedDate) : new Date(timestamp);
-  } else {
-    parsedVisitedDate = new Date(); 
+  }
+
+  // Final check for Invalid Date
+  if (isNaN(parsedVisitedDate.getTime())) {
+    parsedVisitedDate = new Date();
   }
 
   try {
@@ -109,8 +113,8 @@ export const editTravel = async (req: Request, res: Response): Promise<Response>
       story: travelStory,
       message: "Update Successful",
     });
-  } catch (error) {
-    console.error(error);
+  } catch (err) {
+    console.error("editTravel error:", err);
     return res.status(500).json({
       success: false,
       message: "editTravel API not working",
@@ -118,7 +122,7 @@ export const editTravel = async (req: Request, res: Response): Promise<Response>
   }
 };
 
-export const deletetravel = async (req: Request, res: Response): Promise<Response> => {
+export const deleteTravel = async (req: Request, res: Response): Promise<Response> => {
   const { id } = req.params;
   const userId = req.user?._id;
 
@@ -154,7 +158,7 @@ export const deletetravel = async (req: Request, res: Response): Promise<Respons
   }
 };
 
-export const favtravel = async (req: Request, res: Response): Promise<Response> => {
+export const favTravel = async (req: Request, res: Response): Promise<Response> => {
   const { id } = req.params;
   const { isFavourite } = req.body;
   const userId = req.user?._id;
@@ -228,7 +232,42 @@ export const search = async (req: Request, res: Response): Promise<Response> => 
   } catch {
     return res.status(500).json({
       success: false,
-      message: "search API not working"
+      message: "filter API not working"
+    });
+  }
+};
+
+
+
+
+export const filter = async (req: Request, res: Response): Promise<Response> => {
+  const { startDate, endDate } = req.query as { startDate: string; endDate: string };
+  const userId = req.user?._id;
+
+  try {
+    if (!startDate || !endDate) {
+      const allStories = await Travel.find({ userId }).sort({ isFavourite: -1, createdOn: -1 });
+      return res.status(200).json({
+        success: true,
+        message: "All stories returned (no date filter provided)",
+        data: allStories
+      });
+    }
+
+    const filteredStories = await Travel.find({
+      userId: userId,
+      visitedDate: { $gte: new Date(startDate), $lte: new Date(endDate) }
+    }).sort({ isFavourite: -1 });
+
+    return res.status(200).json({
+      success: true,
+      message: "filter api success",
+      data: filteredStories
+    });
+  } catch {
+    return res.status(500).json({
+      success: false,
+      message: "filter API not working"
     });
   }
 };

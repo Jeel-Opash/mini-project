@@ -7,8 +7,8 @@ const travelStorySchema = new Schema({
     userId: { type: Schema.Types.ObjectId, ref: "User", required: true },
     createdOn: { type: Date, default: Date.now },
     imageUrl: { type: String, required: true },
-    visitedDate: { type: Date, required: true },
+    visitedDate: { type: Date, required: true }
 });
-const TravelStory = mongoose.model("TravelStory", travelStorySchema);
-export default TravelStory;
+const Travel = mongoose.model("TravelStory", travelStorySchema);
+export default Travel;
 //# sourceMappingURL=travel.model.js.map

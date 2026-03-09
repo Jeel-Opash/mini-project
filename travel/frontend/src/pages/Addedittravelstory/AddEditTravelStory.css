@@ -1,0 +1,175 @@
+.add-edit-story-container {
+    width: 100%;
+    padding: 32px;
+    border-radius: 24px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-premium);
+    font-family: inherit;
+}
+
+.add-edit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.modal-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-primary-small {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #6366f1, #9333ea);
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.35);
+    transition: all .3s ease;
+}
+
+.btn-primary-small:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(99, 102, 241, 0.45);
+}
+
+.updatestory {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.35);
+    transition: all .3s ease;
+}
+
+.updatestory:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(16, 185, 129, 0.45);
+}
+
+.close-btn {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 10px;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all .3s ease;
+}
+
+.close-btn:hover {
+    background: #e2e8f0;
+    transform: rotate(90deg);
+}
+
+.labelforaddeditstorydata {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-label,
+.inputlabel {
+    font-size: 13px;
+    font-weight: 500;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+
+.inputtitle {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    font-size: 14px;
+    outline: none;
+    transition: all .25s ease;
+}
+
+.inputtitle:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.dateselecter {
+    margin-top: 4px;
+}
+
+.story-input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.story-textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    font-size: 14px;
+    resize: none;
+    outline: none;
+    transition: all .25s ease;
+}
+
+.story-textarea:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.error-message,
+.erroreditadd {
+    color: #ef4444;
+    font-size: 13px;
+}
+
+@keyframes modalFade {
+    from {
+        opacity: 0;
+        transform: translateY(-12px) scale(.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width:768px) {
+
+    .add-edit-story-container {
+        padding: 20px;
+    }
+
+    .modal-title {
+        font-size: 18px;
+    }
+
+}

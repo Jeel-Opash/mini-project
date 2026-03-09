@@ -1,0 +1,79 @@
+.card-container {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: var(--transition-main);
+  cursor: pointer;
+  border: 1px solid rgba(226, 232, 240, 0.5);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-color: var(--primary-glow);
+}
+
+.travelstorycardimg {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .travelstorycardimg {
+    height: 180px;
+  }
+}
+
+.TravelStorycard button {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  border: none;
+  background: #ffffff;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.dattravelstorycard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.storycardtitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.dattravelstorycard span {
+  font-size: 12px;
+  color: #777;
+}
+
+.TravelStorycard p {
+  font-size: 14px;
+  color: #555;
+  margin: 8px 0;
+}
+
+.TravelStorycard div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #666;
+  margin-top: 6px;
+}

@@ -6,28 +6,35 @@ import validator from "validator";
 import User from "../models/user.model.js";
 
 const TOKEN_EXPIRE_TIME = "24h";
-const JWT_SECRET_KEY = process.env.JWT_SECRET as string;
 
 export const Register = async (req: Request, res: Response) => {
+  const JWT_SECRET_KEY = process.env.JWT_SECRET as string;
+  console.log("Register request received:", req.body);
   try {
     const { fullName, email, password } = req.body;
 
     if (!fullName || !email || !password) {
-      return res.status(400).json({ success: false, message: "require all fields" });
+      console.log("Validation failed: Missing fields");
+      return res.status(400).json({ success: false, message: "All fields are required" });
     }
 
     if (!validator.isEmail(email)) {
-      return res.status(400).json({ success: false, message: "invalid email" });
+      console.log("Validation failed: Invalid email");
+      return res.status(400).json({ success: false, message: "Please enter a valid email address" });
     }
 
+    console.log("Checking if user exists...");
     const exist = await User.findOne({ email });
 
     if (exist) {
-      return res.status(400).json({ success: false, message: "user already exist" });
+      console.log("User already exists");
+      return res.status(400).json({ success: false, message: "User already exists" });
     }
 
+    console.log("Hashing password...");
     const hashedPassword = await bcrypt.hash(password, 10);
 
+    console.log("Saving user...");
     const user = new User({
       fullName,
       email,
@@ -36,7 +43,10 @@ export const Register = async (req: Request, res: Response) => {
 
     await user.save();
 
+    console.log("Generating token...");
     const token = jwt.sign({ id: user._id.toString() }, JWT_SECRET_KEY, { expiresIn: TOKEN_EXPIRE_TIME });
+
+    console.log("Registration successful");
 
     return res.status(201).json({
       success: true,
@@ -45,11 +55,12 @@ export const Register = async (req: Request, res: Response) => {
       user: { id: user._id, fullName, email }
     });
   } catch (error) {
-    return res.status(500).json({ message: "register Api not work", error });
+    return res.status(500).json({ success: false, message: "Registration failed", error });
   }
 };
 
 export const Login = async (req: Request, res: Response) => {
+  const JWT_SECRET_KEY = process.env.JWT_SECRET as string;
   try {
     const { email, password } = req.body;
 
@@ -78,7 +89,7 @@ export const Login = async (req: Request, res: Response) => {
       user: { id: user._id, fullName: user.fullName, email: user.email }
     });
   } catch (error) {
-    return res.status(500).json({ message: "Login Api not work", error });
+    return res.status(500).json({ success: false, message: "Login failed", error });
   }
 };
 

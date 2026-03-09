@@ -9,6 +9,6 @@ export interface ITravelStory extends Document {
     imageUrl: string;
     visitedDate: Date;
 }
-declare const TravelStory: Model<ITravelStory>;
-export default TravelStory;
+declare const Travel: Model<ITravelStory>;
+export default Travel;
 //# sourceMappingURL=travel.model.d.ts.map
